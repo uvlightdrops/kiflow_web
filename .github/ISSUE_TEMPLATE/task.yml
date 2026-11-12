@@ -1,0 +1,35 @@
+name: Arbeitspaket
+description: Ein abgegrenztes, prüfbares Ergebnis planen
+title: "[Aufgabe] "
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Projekt und Verantwortung
+      description: Projekt-ID und verantwortliche Person
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem und erwarteter Nutzen
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Umfang und Abgrenzung
+      description: Was gehört dazu, was ausdrücklich nicht?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Akzeptanzkriterien und Nachweis
+      description: Woran erkennen wir, dass das Ergebnis fertig ist?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Abhängigkeiten, Schnittstellen und Dokumentation

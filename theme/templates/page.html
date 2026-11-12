@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · {{ SITENAME }}{% endblock %}
+{% block description %}{{ page.summary | striptags }}{% endblock %}
+{% block content %}
+<section class="page-intro shell"><span class="eyebrow">{{ page.kicker | default("Wissen & Zusammenarbeit") }}</span><h1>{{ page.title }}</h1><p>{{ page.summary | striptags }}</p></section>
+<div class="shell article-layout">
+  <aside class="article-aside"><span class="eyebrow">Orientierung</span>{% for label, url in NAV %}<a href="{{ SITEURL }}/{{ url }}"{% if page.slug ~ '/' == url %} aria-current="page"{% endif %}>{{ label }}</a>{% endfor %}<a href="{{ SITEURL }}/publizieren/">Testseiten veröffentlichen</a><a href="{{ SITEURL }}/governance/">Verantwortung & Transparenz</a><div class="aside-note">Wissen bleibt pflegbar.<br>Inhalte: Markdown<br>Projektregister: JSON</div></aside>
+  <article class="prose">{{ page.content | safe }}</article>
+</div>
+{% endblock %}

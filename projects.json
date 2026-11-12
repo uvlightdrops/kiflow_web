@@ -1,0 +1,189 @@
+[
+  {
+    "id": "kiflow-web",
+    "name": "Kiflow Portal",
+    "summary": "Der gemeinsame Einstieg für Orientierung, Projektwissen und statische Testseiten. Diese Website ist das erste verbindende Element.",
+    "category": "Plattform",
+    "phase": "aufbau",
+    "owner": "Noch zu benennen",
+    "next_step": "Hosting-Ziel festlegen und den ersten öffentlichen Stand veröffentlichen.",
+    "tags": ["Python", "Pelican", "Wissensportal"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ia3-simworld",
+    "name": "IA3 SimWorld",
+    "summary": "Eine geschichtete Simulationsplattform für menschliche Welten, soziale KI-Agenten und Lernräume. Kooperation mit ki-knowledge und gemeinsame Node-Pakete sind dokumentiert.",
+    "category": "Simulation",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Aktuellen Integrationsstand bestätigen, einen statischen UI-Build anbinden und den gemeinsamen Node-Pilot abgrenzen.",
+    "tags": ["Go", "Python", "Next.js", "Agenten"],
+    "preview_kind": "demo"
+  },
+  {
+    "id": "agent-service",
+    "name": "Agent Logic",
+    "summary": "Teilprojekt von IA3 SimWorld: eine klar abgegrenzte Logikschicht, in der Agenten Beobachtungen in Entscheidungen und Aktionen übersetzen.",
+    "category": "Agenten",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Die dokumentierte Mesa-/gRPC-Anbindung prüfen und den ersten nachweisbaren Agentenablauf beschreiben.",
+    "tags": ["Python", "gRPC", "Verhalten"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "experience-layer",
+    "name": "Experience Layer",
+    "summary": "Geplante Ausbauschicht von IA3 SimWorld für spielerische, pädagogische und perspektivisch AR-fähige Zugänge zur simulierten Welt.",
+    "category": "Erlebnis",
+    "phase": "geplant",
+    "owner": "Noch zu benennen",
+    "next_step": "Einen ersten webbasierten Lern- oder Spielmodus mit prüfbarem Nutzen definieren.",
+    "tags": ["Web", "Lernen", "AR-Perspektive"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-ecosystem",
+    "name": "KI Ecosystem",
+    "summary": "Koordinierender Rahmen für die gemeinsamen KI-Komponenten, Abhängigkeiten und projektübergreifenden Installations- und Betriebswege.",
+    "category": "Plattform",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Komponentenübersicht und aktuelle stackctl-Integration auf denselben Dokumentationsstand bringen.",
+    "tags": ["Python", "Multi-Repo", "Integration"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-core",
+    "name": "KI Core",
+    "summary": "Gemeinsamer KI-Client mit Provider-Abstraktion, Streaming und konfigurationsbezogenen Diensten für mehrere Anwendungen.",
+    "category": "KI-Basis",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Verwendete Provider- und Runtime-Settings-Verträge für die angebundenen Anwendungen dokumentieren.",
+    "tags": ["Python", "LLM", "Provider", "Konfiguration"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-knowledge",
+    "name": "KI Knowledge",
+    "summary": "Wissensverarbeitung mit Ingestion, Relationen, hybrider Suche und Weboberfläche. Eine Textwerkstatt verbindet Quellen, eigene Texte und expliziten KI-Kontext.",
+    "category": "Wissen",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Einen freigegebenen Wissens- oder Textwerkstatt-Demostand mit synthetischen Daten auswählen.",
+    "tags": ["Python", "Django", "Wissensgraph", "Suche"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "kicli-code-assist",
+    "name": "KI Code Assist",
+    "summary": "Terminalbasierte KI-Codeassistenz mit Kontext, Chat und Diff-Vorschau. Änderungen sollen vor der Übernahme menschlich überprüfbar bleiben.",
+    "category": "Entwicklung",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Einen nachvollziehbaren Ablauf von Anfrage über Diff bis zur Freigabe dokumentieren.",
+    "tags": ["Python", "TUI", "Tmux", "Code-Review"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "yaml-cfg-wizard",
+    "name": "YAML Config Wizard",
+    "summary": "Wiederverwendbare Auflösung und Validierung geschichteter Konfiguration: Defaults, Profile, Stages, Runtime und Umgebung bleiben explizit.",
+    "category": "Konfiguration",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Die verbindlichen Auflösungsregeln und Editor-Grenzen je Host-Anwendung sichtbar machen.",
+    "tags": ["Python", "YAML", "JSON Schema"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "yaml-cfg-wizard-ui",
+    "name": "YAML Config Wizard UI",
+    "summary": "Frameworkunabhängige Oberfläche für freigegebene Konfigurationsfelder. Ein Host stellt Authentifizierung und den validierenden HTTP-Endpunkt bereit.",
+    "category": "Konfiguration",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Eine rein statische Editor-Demonstration ohne echte Konfiguration oder Zugangsdaten bereitstellen.",
+    "tags": ["Python", "HTML", "JavaScript", "HTTP-Vertrag"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "widgetkit",
+    "name": "WidgetKit",
+    "summary": "Frameworkneutrale Grundlage für wiederverwendbare Widgets: Metadaten, Datenaufbereitung und Jinja-Darstellung sind getrennte Verantwortlichkeiten.",
+    "category": "UI-Bausteine",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Einen statischen Widget-Katalog mit freigegebenen Beispiel-Payloads exportieren.",
+    "tags": ["Python", "Jinja", "Widgets"],
+    "preview_kind": "demo"
+  },
+  {
+    "id": "widgetkit-django",
+    "name": "WidgetKit Django",
+    "summary": "Django-Integration für Dashboard- und Seitenlayouts mit wiederverwendbarem Builder, Registry- und Persistenzverträgen.",
+    "category": "UI-Bausteine",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Den Host-Vertrag und die Grenze zwischen statischer Vorschau und servergebundenem Builder dokumentieren.",
+    "tags": ["Python", "Django", "Dashboard", "Layout"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "stackctl",
+    "name": "Stack Control",
+    "summary": "Projektübergreifendes Werkzeug für Repository-Koordination und Service-Stacks: lokale Prozesse, Minikube und Kubernetes werden aus einer Stack-Beschreibung gesteuert.",
+    "category": "Betrieb",
+    "phase": "entwicklung",
+    "owner": "Noch zu benennen",
+    "next_step": "Portal-Veröffentlichung und Backend-Betrieb als getrennte Freigabewege festhalten.",
+    "tags": ["Python", "CLI", "Helm", "Multi-Repo"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-flowcoach",
+    "name": "KI FlowCoach",
+    "summary": "Konzept eines Coaching-Assistenten mit kuratiertem Wissenskontext und menschlicher fachlicher Begleitung. Noch keine lauffähige Anwendung.",
+    "category": "Anwendungen",
+    "phase": "geplant",
+    "owner": "Noch zu benennen",
+    "next_step": "Einen textbasierten Durchstich mit synthetischen Gesprächen und fachlichem Feedback abgrenzen.",
+    "tags": ["Konzept", "Wissen", "Dialog"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-node-core",
+    "name": "KI Node Core",
+    "summary": "Vorbereitetes Python-Paket für frameworkfreie Node-Typen und Adapterverträge im Kooperationsfeld zwischen SimWorld und KI Knowledge.",
+    "category": "Kooperation",
+    "phase": "vorab",
+    "owner": "Noch zu benennen",
+    "next_step": "Maintainer, Lizenz und ersten Domain-Adapter gemeinsam festlegen.",
+    "tags": ["Python", "Verträge", "Nodes"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ki-node-http",
+    "name": "KI Node HTTP",
+    "summary": "Vorbereitetes Python-Paket mit begrenztem HTTP-JSON-Client für spätere Projektadapter. Keine bereits integrierte gemeinsame Runtime.",
+    "category": "Kooperation",
+    "phase": "vorab",
+    "owner": "Noch zu benennen",
+    "next_step": "Versioniertes Wire-Schema und gemeinsame Fixtures vor einem produktiven Pilot vereinbaren.",
+    "tags": ["Python", "HTTP", "JSON", "Transport"],
+    "preview_kind": "none"
+  },
+  {
+    "id": "ia3-config-editor",
+    "name": "IA3 Config Editor",
+    "summary": "Vorbereitetes IA3-spezifisches Paket für einen begrenzten Startup-Konfigurationseditor; getrennt vom generischen UI-Renderer.",
+    "category": "Konfiguration",
+    "phase": "vorab",
+    "owner": "Noch zu benennen",
+    "next_step": "Host-Anbindung, erlaubte Felder und erforderliche Neustarts für den ersten Einsatz bestätigen.",
+    "tags": ["Python", "IA3", "Startup-Konfiguration"],
+    "preview_kind": "none"
+  }
+]

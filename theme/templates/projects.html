@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% from "cards.html" import project_card %}
+{% set active = "projekte/" %}
+{% block title %}Projekte · {{ SITENAME }}{% endblock %}
+{% block content %}
+<section class="page-intro shell"><span class="eyebrow">Portfolio / {{ PROJECTS | length }} Bausteine</span><h1>Ideen werden<br><span class="serif">konkret.</span></h1><p>KI-Basis, Wissen, Entwicklung, Konfiguration, UI und Simulation: Hier siehst du Projekte und Teilpakete, ihre Einordnung und den jeweils nächsten Schritt.</p></section>
+<section class="shell section project-directory">
+  <div class="project-tools" data-filters hidden><label for="project-search">Projekte durchsuchen<input type="search" id="project-search" placeholder="Name, Thema oder Technologie …"></label><label for="project-category">Bereich<select id="project-category"><option value="">Alle Bereiche</option>{% for category in PROJECTS | map(attribute='category') | unique %}<option>{{ category }}</option>{% endfor %}</select></label><p data-result-count role="status" aria-live="polite"></p></div>
+  <div class="project-grid">{% for project in PROJECTS %}{{ project_card(project, SITEURL, PHASES) }}{% endfor %}</div>
+  <p data-empty hidden>Keine Projekte gefunden. Wähle einen anderen Suchbegriff oder Bereich.</p>
+  <aside class="notice"><strong>Status ist eine Aussage, kein Versprechen.</strong><p>Die Einordnung beruht auf lokal vorhandener Projektdokumentation, nicht auf einer Prüfung laufender Dienste. „Vorabpaket“ bedeutet keine fertige Integration. Nächste Schritte sind redaktionelle Vorschläge, keine übernommenen Zusagen aus den Issue-Boards. Verantwortliche müssen vor der öffentlichen Nutzung benannt werden.</p></aside>
+</section>
+{% endblock %}

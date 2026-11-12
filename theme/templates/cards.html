@@ -1,0 +1,18 @@
+{% macro project_card(project, SITEURL, PHASES) %}
+<article class="project-card" id="{{ project.id }}" data-project data-category="{{ project.category }}" data-search="{{ project.name }} {{ project.summary }} {{ project.tags | join(' ') }}">
+  <div class="card-top"><span class="project-icon" aria-hidden="true">{% if project.category == 'Simulation' %}◈{% elif project.category == 'Agenten' %}⌘{% elif project.category == 'Erlebnis' %}↗{% else %}⌂{% endif %}</span><span class="status status-{{ project.phase }}"><span aria-hidden="true">●</span> {{ PHASES[project.phase] }}</span></div>
+  <span class="eyebrow">{{ project.category }}</span>
+  <h3>{{ project.name }}</h3>
+  <p>{{ project.summary }}</p>
+  <div class="tags">{% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}</div>
+  <details><summary>Nächster Schritt</summary><p>{{ project.next_step }}</p><p class="owner">Verantwortung: {{ project.owner }}</p></details>
+  <div class="card-bottom">
+    {% if project.preview_kind != 'none' %}
+    <a href="{{ SITEURL }}/test-sites/{{ project.id }}/">{% if project.preview_kind == 'demo' %}Layout-Demo öffnen{% else %}Testseite öffnen{% endif %} <span aria-hidden="true">↗</span></a>
+    {% else %}
+    <span class="muted">Noch keine Testseite</span>
+    {% endif %}
+    <a class="icon-link" href="{{ SITEURL }}/oekosystem/#{{ project.id }}" aria-label="Einordnung von {{ project.name }}">→</a>
+  </div>
+</article>
+{% endmacro %}
